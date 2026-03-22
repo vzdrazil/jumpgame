@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dnwdwa7a4altr"]
+
+[ext_resource type="Texture2D" uid="uid://ban32l63owb3k" path="res://icon.svg" id="1_4flbx"]
+
+[sub_resource type="GDScript" id="GDScript_onrkg"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 400.0
+const JUMP_VELOCITY = -500.0
+
+
+func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+		velocity.x = SPEED
+
+
+	move_and_slide()
+	
+	func Explode():
+	queue_free()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
+size = Vector2(128, 128)
+
+[node name="player" type="CharacterBody2D" unique_id=1337890187]
+script = SubResource("GDScript_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=680774025]
+texture = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1377382138]
+shape = SubResource("RectangleShape2D_i3pqv")
