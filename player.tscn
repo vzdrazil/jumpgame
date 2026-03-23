@@ -5,33 +5,42 @@
 [sub_resource type="GDScript" id="GDScript_onrkg"]
 script/source = "extends CharacterBody2D
 
-
 const SPEED = 400.0
-const JUMP_VELOCITY = -500.0
+const JUMP_VELOCITY = -800.0
+const GRAVITY = 2000.0        # Silnější gravitace pro rychlý pád
+const ROTATION_SPEED = 7.5   # Rychlejší rotace ve vzduchu
 
+@onready var sprite = $Sprite2D   # rotujeme jen sprite
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+	# Horizontální pohyb je konstantní
+	velocity.x = SPEED
 
-	# Handle jump.
+	# Gravity
+	if not is_on_floor():
+		velocity.y += GRAVITY * delta
+	else:
+		velocity.y = 0  # reset y při dopadu
+		sprite.rotation = 0  # reset rotace na zemi
+
+	# Jump - okamžitý skok při stisku
 	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-		velocity.x = SPEED
-
+	# Rotace sprite jen ve vzduchu
+	if not is_on_floor():
+		sprite.rotation += ROTATION_SPEED * delta
 
 	move_and_slide()
 	
-	func Explode():
+func Explode():
 	queue_free()
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
 size = Vector2(128, 128)
 
-[node name="player" type="CharacterBody2D" unique_id=1337890187]
+[node name="Player" type="CharacterBody2D" unique_id=1337890187]
 script = SubResource("GDScript_onrkg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=680774025]

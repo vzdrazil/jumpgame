@@ -1,9 +1,15 @@
 [gd_scene format=3 uid="uid://dfrv8o1blwore"]
 
+[ext_resource type="Script" uid="uid://bhacnh4f5rkr2" path="res://one_by_one.gd" id="1_np0fr"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yc5i5"]
-size = Vector2(126, 120)
+size = Vector2(124, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_np0fr"]
+size = Vector2(73, 117)
 
 [node name="OneByOne" type="StaticBody2D" unique_id=1964752493]
+script = ExtResource("1_np0fr")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1676041098]
 offset_left = -63.0
@@ -12,4 +18,13 @@ offset_right = 63.0
 offset_bottom = 60.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1304971992]
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_yc5i5")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=55918311]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1837223566]
+position = Vector2(-26.5, 1.5)
+shape = SubResource("RectangleShape2D_np0fr")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

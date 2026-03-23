@@ -1,10 +1,12 @@
 extends Node2D
+@onready var player = $Player
 
-func physics_process(delta):
-	$KillZone.position.y=$Player.position.y
-	$KillZone.position.x += $Player.SPEED*delta
-	
+func _physics_process(delta):
+	$KillZone.position.y = player.position.y
+	$KillZone.position.x += player.SPEED * delta
 
 
 func _on_kill_zone_body_entered(body):
-	var things = $KillZone.get_overlapping_bodies()
+	if body.is_in_group("enemy"):
+		body.Explode()
+			

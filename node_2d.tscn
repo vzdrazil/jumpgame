@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://b7ghv0brce2de" path="res://node_2d.gd" id="1_0hol4"]
 [ext_resource type="PackedScene" uid="uid://dfrv8o1blwore" path="res://one_by_one.tscn" id="2_epypp"]
 [ext_resource type="PackedScene" uid="uid://dairla2nn32k6" path="res://kill_zone.tscn" id="4_q6r6c"]
+[ext_resource type="PackedScene" uid="uid://b65gfolbolw4q" path="res://spike.tscn" id="5_q6r6c"]
 
 [node name="Level" type="Node2D" unique_id=1267595479]
 script = ExtResource("1_0hol4")
@@ -38,15 +39,27 @@ position = Vector2(967, 384)
 position = Vector2(1093, 384)
 
 [node name="OneByOne9" parent="." unique_id=356147836 instance=ExtResource("2_epypp")]
-position = Vector2(1387, 375)
+position = Vector2(1345, 384)
 
 [node name="OneByOne10" parent="." unique_id=2070839103 instance=ExtResource("2_epypp")]
-position = Vector2(1660, 320)
+position = Vector2(1471, 384)
 
 [node name="OneByOne11" parent="." unique_id=822148881 instance=ExtResource("2_epypp")]
-position = Vector2(1927, 238)
+position = Vector2(1219, 384)
 
 [node name="KillZone" parent="." unique_id=1944996740 instance=ExtResource("4_q6r6c")]
 position = Vector2(118, 265)
+
+[node name="Spike" parent="." unique_id=1627542830 instance=ExtResource("5_q6r6c")]
+position = Vector2(824, 304)
+
+[node name="Spike2" parent="." unique_id=483619674 instance=ExtResource("5_q6r6c")]
+position = Vector2(913, 304)
+
+[node name="OneByOne12" parent="." unique_id=742993448 instance=ExtResource("2_epypp")]
+position = Vector2(1823, 306)
+
+[node name="OneByOne13" parent="." unique_id=951328937 instance=ExtResource("2_epypp")]
+position = Vector2(2091, 240)
 
 [connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]
