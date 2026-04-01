@@ -8,7 +8,7 @@ script/source = "extends CharacterBody2D
 const SPEED = 550.0
 const JUMP_VELOCITY = -900.0
 const GRAVITY = 2900.0
-const ROTATION_SPEED = 3.75
+const ROTATION_SPEED = 5.10
 
 @onready var sprite = $Sprite2D
 
@@ -38,7 +38,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func Explode():
-	queue_free()
+	set_physics_process(false)
+	visible = false
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
