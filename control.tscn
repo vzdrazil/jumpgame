@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://b5sae7keovndg"]
+
+[ext_resource type="Script" uid="uid://2kmbvpx6pmal" path="res://control.gd" id="1_0fbet"]
+[ext_resource type="Texture2D" uid="uid://34r40dhbsgmy" path="res://3129831.jpg" id="2_62e2m"]
+
+[node name="MainMenu" type="Control" unique_id=692160969]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0fbet")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1545301868]
+layout_mode = 0
+offset_left = -1245.0
+offset_top = -470.0
+offset_right = 1755.0
+offset_bottom = 1530.0
+texture = ExtResource("2_62e2m")
+
+[node name="Label" type="Label" parent="." unique_id=2081339497]
+layout_mode = 0
+offset_left = -358.0
+offset_top = 143.0
+offset_right = 1523.0
+offset_bottom = 490.0
+text = "GODOTDASH"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="PlayButton" type="Button" parent="." unique_id=1504920090]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="OptionButton" type="Button" parent="." unique_id=918620347]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="QuitButton" type="Button" parent="." unique_id=468154165]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

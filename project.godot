@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="JumpGame"
-run/main_scene="uid://dvkhkjqlip6hv"
+run/main_scene="uid://b5sae7keovndg"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
