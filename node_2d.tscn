@@ -2,50 +2,32 @@
 
 [ext_resource type="PackedScene" uid="uid://dnwdwa7a4altr" path="res://player.tscn" id="1_0e48y"]
 [ext_resource type="Script" uid="uid://b7ghv0brce2de" path="res://node_2d.gd" id="1_0hol4"]
+[ext_resource type="Texture2D" uid="uid://b36rqk06eajpe" path="res://86yagye25g841.webp" id="2_4d7sh"]
 [ext_resource type="PackedScene" uid="uid://dfrv8o1blwore" path="res://one_by_one.tscn" id="2_epypp"]
 [ext_resource type="PackedScene" uid="uid://dairla2nn32k6" path="res://kill_zone.tscn" id="4_q6r6c"]
 [ext_resource type="PackedScene" uid="uid://b65gfolbolw4q" path="res://spike.tscn" id="5_q6r6c"]
 [ext_resource type="Script" uid="uid://ptgitfubdf1a" path="res://camera_2d.gd" id="6_kdubu"]
 [ext_resource type="Script" uid="uid://cfv0l202vormt" path="res://audio_stream_player_2d.gd" id="7_d21ai"]
+[ext_resource type="PackedScene" uid="uid://bh4lnwf7rluul" path="res://static_body_2d.tscn" id="8_rj586"]
 
 [node name="Level" type="Node2D" unique_id=1267595479]
 script = ExtResource("1_0hol4")
 
+[node name="86Yagye25g843" type="Sprite2D" parent="." unique_id=1855299328]
+position = Vector2(7801, 561)
+texture = ExtResource("2_4d7sh")
+
+[node name="86Yagye25g842" type="Sprite2D" parent="." unique_id=909591952]
+position = Vector2(4602, 558)
+texture = ExtResource("2_4d7sh")
+
+[node name="86Yagye25g841" type="Sprite2D" parent="." unique_id=2125845056]
+position = Vector2(1233, 559)
+scale = Vector2(1.0884387, 1)
+texture = ExtResource("2_4d7sh")
+
 [node name="Player" parent="." unique_id=1337890187 instance=ExtResource("1_0e48y")]
-position = Vector2(211, 261)
-
-[node name="OneByOne" parent="." unique_id=1964752493 instance=ExtResource("2_epypp")]
-position = Vector2(213, 384)
-
-[node name="OneByOne2" parent="." unique_id=1344602529 instance=ExtResource("2_epypp")]
-position = Vector2(339, 384)
-
-[node name="OneByOne3" parent="." unique_id=1172232026 instance=ExtResource("2_epypp")]
-position = Vector2(464, 384)
-
-[node name="OneByOne4" parent="." unique_id=1743860498 instance=ExtResource("2_epypp")]
-position = Vector2(590, 384)
-
-[node name="OneByOne5" parent="." unique_id=36472648 instance=ExtResource("2_epypp")]
-position = Vector2(715, 384)
-
-[node name="OneByOne6" parent="." unique_id=140300942 instance=ExtResource("2_epypp")]
-position = Vector2(841, 384)
-
-[node name="OneByOne7" parent="." unique_id=1584570326 instance=ExtResource("2_epypp")]
-position = Vector2(967, 384)
-
-[node name="OneByOne8" parent="." unique_id=555186040 instance=ExtResource("2_epypp")]
-position = Vector2(1093, 384)
-
-[node name="OneByOne9" parent="." unique_id=356147836 instance=ExtResource("2_epypp")]
-position = Vector2(1345, 384)
-
-[node name="OneByOne10" parent="." unique_id=2070839103 instance=ExtResource("2_epypp")]
-position = Vector2(1471, 384)
-
-[node name="OneByOne11" parent="." unique_id=822148881 instance=ExtResource("2_epypp")]
-position = Vector2(1219, 384)
+position = Vector2(204, 262)
 
 [node name="KillZone" parent="." unique_id=1944996740 instance=ExtResource("4_q6r6c")]
 position = Vector2(118, 265)
@@ -55,12 +37,6 @@ position = Vector2(824, 304)
 
 [node name="Spike2" parent="." unique_id=483619674 instance=ExtResource("5_q6r6c")]
 position = Vector2(913, 304)
-
-[node name="OneByOne12" parent="." unique_id=742993448 instance=ExtResource("2_epypp")]
-position = Vector2(1595, 384)
-
-[node name="OneByOne13" parent="." unique_id=951328937 instance=ExtResource("2_epypp")]
-position = Vector2(1721, 384)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=811798600]
 position = Vector2(211, 261)
@@ -72,64 +48,158 @@ script = ExtResource("6_kdubu")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Camera2D" unique_id=1417939327]
 script = ExtResource("7_d21ai")
 
-[node name="OneByOne14" parent="." unique_id=553476807 instance=ExtResource("2_epypp")]
-position = Vector2(1847, 384)
-
-[node name="OneByOne15" parent="." unique_id=732013972 instance=ExtResource("2_epypp")]
-position = Vector2(1971, 384)
-
 [node name="Spike3" parent="." unique_id=1268420758 instance=ExtResource("5_q6r6c")]
 position = Vector2(1445, 304)
 
 [node name="Spike4" parent="." unique_id=1025319480 instance=ExtResource("5_q6r6c")]
 position = Vector2(1721, 303)
 
-[node name="OneByOne16" parent="." unique_id=267126056 instance=ExtResource("2_epypp")]
-position = Vector2(2097, 384)
+[node name="OneByOne15" parent="." unique_id=397552292 instance=ExtResource("2_epypp")]
+position = Vector2(2726, 397)
 
-[node name="OneByOne17" parent="." unique_id=1944199009 instance=ExtResource("2_epypp")]
-position = Vector2(2223, 384)
-
-[node name="OneByOne18" parent="." unique_id=1054722953 instance=ExtResource("2_epypp")]
-position = Vector2(2349, 384)
+[node name="OneByOne17" parent="OneByOne15" unique_id=2131585182 instance=ExtResource("2_epypp")]
+position = Vector2(-2548, 1)
 
 [node name="OneByOne19" parent="." unique_id=1746480040 instance=ExtResource("2_epypp")]
-position = Vector2(2664, 538)
+position = Vector2(3178, 534)
 
-[node name="OneByOne20" parent="." unique_id=624570615 instance=ExtResource("2_epypp")]
-position = Vector2(2940, 728)
-
-[node name="OneByOne21" parent="." unique_id=1091011776 instance=ExtResource("2_epypp")]
-position = Vector2(3066, 728)
-
-[node name="OneByOne22" parent="." unique_id=1192076768 instance=ExtResource("2_epypp")]
-position = Vector2(3191, 728)
-
-[node name="OneByOne23" parent="." unique_id=1348989118 instance=ExtResource("2_epypp")]
-position = Vector2(3317, 728)
+[node name="OneByOne2" parent="OneByOne19" unique_id=1964752493 instance=ExtResource("2_epypp")]
+position = Vector2(1247, -1)
 
 [node name="OneByOne24" parent="." unique_id=1269699837 instance=ExtResource("2_epypp")]
-position = Vector2(3391, 583)
+position = Vector2(3505, 407)
 
 [node name="OneByOne25" parent="." unique_id=967903536 instance=ExtResource("2_epypp")]
-position = Vector2(3389, 320)
-
-[node name="OneByOne26" parent="." unique_id=1795159844 instance=ExtResource("2_epypp")]
-position = Vector2(3443, 727)
-
-[node name="OneByOne27" parent="." unique_id=1435486570 instance=ExtResource("2_epypp")]
-position = Vector2(3569, 727)
-
-[node name="OneByOne28" parent="." unique_id=496896991 instance=ExtResource("2_epypp")]
-position = Vector2(3694, 727)
-
-[node name="OneByOne29" parent="." unique_id=930979883 instance=ExtResource("2_epypp")]
-position = Vector2(4021, 615)
+position = Vector2(3502, 131)
 
 [node name="OneByOne30" parent="." unique_id=1840842742 instance=ExtResource("2_epypp")]
-position = Vector2(4296, 522)
+position = Vector2(3643, 407)
 
 [node name="OneByOne31" parent="." unique_id=783387515 instance=ExtResource("2_epypp")]
-position = Vector2(3391, 666)
+position = Vector2(3505, 540)
+
+[node name="bigOneByOne" parent="." unique_id=1816450378 instance=ExtResource("8_rj586")]
+position = Vector2(4353, 462)
+
+[node name="bigOneByOne2" parent="." unique_id=211692286 instance=ExtResource("8_rj586")]
+position = Vector2(5249, 462)
+
+[node name="bigOneByOne3" parent="." unique_id=353723229 instance=ExtResource("8_rj586")]
+position = Vector2(106, 324)
+
+[node name="bigOneByOne4" parent="." unique_id=1361397817 instance=ExtResource("8_rj586")]
+position = Vector2(1003, 324)
+
+[node name="bigOneByOne5" parent="." unique_id=668912419 instance=ExtResource("8_rj586")]
+position = Vector2(1900, 324)
+
+[node name="OneByOne" parent="." unique_id=1947661294 instance=ExtResource("2_epypp")]
+position = Vector2(3784, 407)
+
+[node name="OneByOne2" parent="." unique_id=153773388 instance=ExtResource("2_epypp")]
+position = Vector2(4425, 672)
+
+[node name="OneByOne3" parent="." unique_id=1865939873 instance=ExtResource("2_epypp")]
+position = Vector2(3926, 407)
+
+[node name="OneByOne4" parent="." unique_id=64351377 instance=ExtResource("2_epypp")]
+position = Vector2(3035, 534)
+
+[node name="Spike5" parent="." unique_id=1398779672 instance=ExtResource("5_q6r6c")]
+position = Vector2(2354, 306)
+
+[node name="Spike6" parent="." unique_id=2031189516 instance=ExtResource("5_q6r6c")]
+position = Vector2(2403, 306)
+
+[node name="Spike7" parent="." unique_id=1851541856 instance=ExtResource("5_q6r6c")]
+position = Vector2(2451, 306)
+
+[node name="Spike8" parent="." unique_id=1547291168 instance=ExtResource("5_q6r6c")]
+position = Vector2(3503, 43)
+
+[node name="Spike9" parent="." unique_id=1172842646 instance=ExtResource("5_q6r6c")]
+position = Vector2(4986, 442)
+
+[node name="Spike10" parent="." unique_id=1166510892 instance=ExtResource("5_q6r6c")]
+position = Vector2(5056, 442)
+
+[node name="Spike11" parent="." unique_id=2013910277 instance=ExtResource("5_q6r6c")]
+position = Vector2(4973, 107.000015)
+rotation = 3.1728044
+
+[node name="OneByOne11" parent="Spike11" unique_id=1447826655 instance=ExtResource("2_epypp")]
+position = Vector2(-2041.4023, -269.4259)
+rotation = 3.110381
+
+[node name="Spike11" parent="Spike11" unique_id=1284724160 instance=ExtResource("5_q6r6c")]
+position = Vector2(4808, 204)
+
+[node name="Spike12" parent="." unique_id=1104489497 instance=ExtResource("5_q6r6c")]
+position = Vector2(5066.0005, 108)
+rotation = -3.1535854
+
+[node name="OneByOne5" parent="." unique_id=1998332415 instance=ExtResource("2_epypp")]
+position = Vector2(5019, 16)
+
+[node name="Spike13" parent="." unique_id=38738904 instance=ExtResource("5_q6r6c")]
+position = Vector2(5021.0005, 108)
+rotation = -3.0974216
+
+[node name="Spike14" parent="." unique_id=1628316267 instance=ExtResource("5_q6r6c")]
+position = Vector2(5556, 388)
+
+[node name="OneByOne6" parent="." unique_id=1470083871 instance=ExtResource("2_epypp")]
+position = Vector2(5561, 477)
+
+[node name="bigOneByOne6" parent="." unique_id=1541406486 instance=ExtResource("8_rj586")]
+position = Vector2(6178, 367)
+
+[node name="Spike15" parent="." unique_id=1970211296 instance=ExtResource("5_q6r6c")]
+position = Vector2(6019, 443)
+
+[node name="OneByOne7" parent="." unique_id=1746641484 instance=ExtResource("2_epypp")]
+position = Vector2(6115, 438)
+
+[node name="Spike16" parent="." unique_id=2012119497 instance=ExtResource("5_q6r6c")]
+position = Vector2(6530, 347)
+
+[node name="Spike17" parent="." unique_id=1509185819 instance=ExtResource("5_q6r6c")]
+position = Vector2(6483, 347)
+
+[node name="Spike18" parent="." unique_id=992453257 instance=ExtResource("5_q6r6c")]
+position = Vector2(6580, 347)
+
+[node name="Spike19" parent="." unique_id=1206533152 instance=ExtResource("5_q6r6c")]
+position = Vector2(6628, 347)
+
+[node name="OneByOne8" parent="." unique_id=1481671631 instance=ExtResource("2_epypp")]
+position = Vector2(7328, 351)
+
+[node name="OneByOne9" parent="." unique_id=576245114 instance=ExtResource("2_epypp")]
+position = Vector2(7628, 263)
+
+[node name="OneByOne10" parent="." unique_id=516775410 instance=ExtResource("2_epypp")]
+position = Vector2(7927, 163)
+
+[node name="OneByOne11" parent="." unique_id=1380603615 instance=ExtResource("2_epypp")]
+position = Vector2(7005, 579)
+
+[node name="OneByOne12" parent="." unique_id=238524577 instance=ExtResource("2_epypp")]
+position = Vector2(3926, 544)
+
+[node name="OneByOne13" parent="." unique_id=1691618063 instance=ExtResource("2_epypp")]
+position = Vector2(3926, 685)
+
+[node name="OneByOne14" parent="." unique_id=940299953 instance=ExtResource("2_epypp")]
+position = Vector2(3505, 681)
+
+[node name="OneByOne16" parent="." unique_id=1176835200 instance=ExtResource("2_epypp")]
+position = Vector2(2726, 537)
+
+[node name="OneByOne18" parent="." unique_id=1114579077 instance=ExtResource("2_epypp")]
+position = Vector2(178, 537)
+
+[node name="OneByOne20" parent="." unique_id=1121864459 instance=ExtResource("2_epypp")]
+position = Vector2(8210, 73)
 
 [connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b65gfolbolw4q"]
 
 [ext_resource type="Script" uid="uid://dn5jcssf7ceco" path="res://spike.gd" id="1_8ryga"]
+[ext_resource type="Texture2D" uid="uid://cojo80o2wstc0" path="res://spikes-11550721030sp47x0fyra-removebg-preview.png" id="2_7k7bx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pe76i"]
 size = Vector2(20, 47)
@@ -8,38 +9,13 @@ size = Vector2(20, 47)
 [node name="Spike" type="Area2D" unique_id=1627542830]
 script = ExtResource("1_8ryga")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1156823976]
-offset_left = -46.0
-offset_top = 7.0
-offset_right = 46.0
-offset_bottom = 20.0
-
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=315445192]
-offset_left = -20.0
-offset_top = -28.0
-offset_right = 20.0
-offset_bottom = 20.0
-
-[node name="ColorRect3" type="ColorRect" parent="." unique_id=575481154]
-offset_left = -30.0
-offset_top = -18.0
-offset_right = 30.0
-offset_bottom = 20.0
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=413259337]
 position = Vector2(0, -3.5)
 shape = SubResource("RectangleShape2D_pe76i")
 
-[node name="ColorRect4" type="ColorRect" parent="." unique_id=1825703987]
-offset_left = -7.0
-offset_top = -41.0
-offset_right = 8.0
-offset_bottom = 20.0
-
-[node name="ColorRect5" type="ColorRect" parent="." unique_id=4508218]
-offset_left = -37.0
-offset_top = -5.0
-offset_right = 37.0
-offset_bottom = 20.0
+[node name="Spikes11550721030Sp47x0FyraRemovebgPreview" type="Sprite2D" parent="." unique_id=267384023]
+position = Vector2(2, -12)
+scale = Vector2(0.14271258, 0.12797032)
+texture = ExtResource("2_7k7bx")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

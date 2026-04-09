@@ -1,14 +1,17 @@
 [gd_scene format=3 uid="uid://bh4lnwf7rluul"]
 
+[ext_resource type="Texture2D" uid="uid://c8l74wuq5q1wi" path="res://grunge-texture-effect-distressed-overlay-rough-textured-realistic-gray-abstract-background-graphic-design-element-concrete-wall-style-concept-for-banner-flyer-poster-brochure-cover-etc-vector.jpg" id="1_yjt17"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yc5i5"]
-size = Vector2(40, 40)
+size = Vector2(896.375, 29)
 
-[node name="OneByOne" type="StaticBody2D" unique_id=1964752493]
+[node name="bigOneByOne" type="StaticBody2D" unique_id=1964752493]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1676041098]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="GrungeTextureEffectDistressedOverlayRoughTexturedRealisticGrayAbstractBackgroundGraphicDesignElementConcreteWallStyleConceptForBannerFlyerPosterBrochureCoverEtcVector" type="Sprite2D" parent="." unique_id=308874573]
+position = Vector2(448.5, 14.499984)
+scale = Vector2(0.4880305, 0.029591804)
+texture = ExtResource("1_yjt17")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1304971992]
-position = Vector2(20, 20)
+position = Vector2(449.1875, 14.5)
 shape = SubResource("RectangleShape2D_yc5i5")
