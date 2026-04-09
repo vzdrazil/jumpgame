@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dairla2nn32k6" path="res://kill_zone.tscn" id="4_q6r6c"]
 [ext_resource type="PackedScene" uid="uid://b65gfolbolw4q" path="res://spike.tscn" id="5_q6r6c"]
 [ext_resource type="Script" uid="uid://ptgitfubdf1a" path="res://camera_2d.gd" id="6_kdubu"]
-[ext_resource type="Script" uid="uid://8ol3nm80dpgt" path="res://audio_stream_player_2d.gd" id="7_d21ai"]
+[ext_resource type="Script" uid="uid://cfv0l202vormt" path="res://audio_stream_player_2d.gd" id="7_d21ai"]
 
 [node name="Level" type="Node2D" unique_id=1267595479]
 script = ExtResource("1_0hol4")

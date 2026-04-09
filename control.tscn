@@ -33,15 +33,24 @@ uppercase = true
 
 [node name="PlayButton" type="Button" parent="." unique_id=1504920090]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 454.0
+offset_top = 339.0
+offset_right = 698.0
+offset_bottom = 391.0
+text = "PLAY"
 
 [node name="OptionButton" type="Button" parent="." unique_id=918620347]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 453.0
+offset_top = 403.0
+offset_right = 698.0
+offset_bottom = 454.0
+text = "OPTIONS"
 
 [node name="QuitButton" type="Button" parent="." unique_id=468154165]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 461.0
+offset_top = 466.0
+offset_right = 701.0
+offset_bottom = 510.0
+text = "QUIT"

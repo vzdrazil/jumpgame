@@ -13,7 +13,7 @@ config_version=5
 config/name="JumpGame"
 run/main_scene="uid://b5sae7keovndg"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://dj8qlwmgje7t5"
 
 [dotnet]
 

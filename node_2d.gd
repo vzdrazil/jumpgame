@@ -1,6 +1,12 @@
 extends Node2D
 @onready var player = $Player
+var music
 
+func _ready():
+	music = AudioStreamPlayer.new()
+	add_child(music)
+	music.stream = load("res://music.mp3")
+	music.play()
 func _process(delta):
 	if not player or not is_instance_valid(player):
 		return
