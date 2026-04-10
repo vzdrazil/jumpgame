@@ -1,7 +1,7 @@
 extends Camera2D
 @onready var player = get_parent().get_node("Player")
 
-
+@export var x_offset := -180  # 👈 hráč bude víc vlevo
 @export var y_offset := 100   # jak daleko může hráč vyskočit bez pohybu kamery
 @export var follow_speed := 5 # jak rychle kamera dojede
 
@@ -10,7 +10,7 @@ func _process(delta):
 		return
 
 	# vždy sleduj X
-	global_position.x = player.global_position.x
+	global_position.x = player.global_position.x-x_offset
 
 	var target_y = global_position.y
 

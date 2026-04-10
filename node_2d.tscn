@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://ptgitfubdf1a" path="res://camera_2d.gd" id="6_kdubu"]
 [ext_resource type="Script" uid="uid://cfv0l202vormt" path="res://audio_stream_player_2d.gd" id="7_d21ai"]
 [ext_resource type="PackedScene" uid="uid://bh4lnwf7rluul" path="res://static_body_2d.tscn" id="8_rj586"]
+[ext_resource type="PackedScene" uid="uid://c51yj65gyrcbw" path="res://pause_menu.tscn" id="11_x0ka3"]
 
 [node name="Level" type="Node2D" unique_id=1267595479]
 script = ExtResource("1_0hol4")
@@ -201,5 +202,9 @@ position = Vector2(178, 537)
 
 [node name="OneByOne20" parent="." unique_id=1121864459 instance=ExtResource("2_epypp")]
 position = Vector2(8210, 73)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=109280880]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=1379368621 instance=ExtResource("11_x0ka3")]
 
 [connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]

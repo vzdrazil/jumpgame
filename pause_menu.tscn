@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://c51yj65gyrcbw"]
+
+[ext_resource type="Script" uid="uid://b51xhiuyy4y3p" path="res://pause_menu.gd" id="1_hdmo1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdmo1"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.77254903, 0.101960786, 0.101960786, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwcfo"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.7050191, 0.04735922, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05uyy"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.101960786, 0.8862745, 0.101960786, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="PauseMenu" type="Control" unique_id=1379368621]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hdmo1")
+
+[node name="Panel" type="Panel" parent="." unique_id=1964634295]
+layout_mode = 0
+offset_left = 341.0
+offset_top = 154.0
+offset_right = 788.0
+offset_bottom = 298.0
+
+[node name="Restart" type="Button" parent="." unique_id=1668120525]
+layout_mode = 0
+offset_left = 651.0
+offset_top = 233.0
+offset_right = 775.0
+offset_bottom = 282.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_hdmo1")
+text = "RESTART"
+
+[node name="MainMenu" type="Button" parent="." unique_id=472896902]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 232.0
+offset_right = 495.0
+offset_bottom = 282.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_nwcfo")
+text = "MAIN MENU"
+
+[node name="Label" type="Label" parent="." unique_id=1074701598]
+layout_mode = 0
+offset_left = 532.0
+offset_top = 171.0
+offset_right = 993.0
+offset_bottom = 265.0
+text = "PAUSE"
+
+[node name="Continue" type="Button" parent="." unique_id=553600647]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 233.0
+offset_right = 636.0
+offset_bottom = 281.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_05uyy")
+text = "CONTINUE"
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
