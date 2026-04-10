@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://ptgitfubdf1a" path="res://camera_2d.gd" id="6_kdubu"]
 [ext_resource type="Script" uid="uid://cfv0l202vormt" path="res://audio_stream_player_2d.gd" id="7_d21ai"]
 [ext_resource type="PackedScene" uid="uid://bh4lnwf7rluul" path="res://static_body_2d.tscn" id="8_rj586"]
+[ext_resource type="PackedScene" uid="uid://cs7hekgvmreeg" path="res://portal.tscn" id="11_hqns4"]
 [ext_resource type="PackedScene" uid="uid://c51yj65gyrcbw" path="res://pause_menu.tscn" id="11_x0ka3"]
 
 [node name="Level" type="Node2D" unique_id=1267595479]
@@ -27,8 +28,20 @@ position = Vector2(1233, 559)
 scale = Vector2(1.0884387, 1)
 texture = ExtResource("2_4d7sh")
 
+[node name="86Yagye25g844" type="Sprite2D" parent="." unique_id=473855455]
+position = Vector2(10726, 558)
+texture = ExtResource("2_4d7sh")
+
+[node name="86Yagye25g845" type="Sprite2D" parent="." unique_id=1098090368]
+position = Vector2(13655, 558)
+texture = ExtResource("2_4d7sh")
+
+[node name="86Yagye25g846" type="Sprite2D" parent="." unique_id=1499574629]
+position = Vector2(16585, 560)
+texture = ExtResource("2_4d7sh")
+
 [node name="Player" parent="." unique_id=1337890187 instance=ExtResource("1_0e48y")]
-position = Vector2(204, 262)
+position = Vector2(6746, 306)
 
 [node name="KillZone" parent="." unique_id=1944996740 instance=ExtResource("4_q6r6c")]
 position = Vector2(118, 265)
@@ -206,5 +219,12 @@ position = Vector2(8210, 73)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=109280880]
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=1379368621 instance=ExtResource("11_x0ka3")]
+offset_left = 596.0
+offset_top = 174.0
+offset_right = 596.0
+offset_bottom = 174.0
+
+[node name="Portal" parent="." unique_id=747170974 instance=ExtResource("11_hqns4")]
+position = Vector2(8567, -58)
 
 [connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]

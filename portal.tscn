@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cs7hekgvmreeg"]
+
+[ext_resource type="Script" uid="uid://ceex5eavinxec" path="res://area_2d.gd" id="1_0r486"]
+[ext_resource type="Texture2D" uid="uid://c4yeis8whdc24" path="res://ShipPortal-removebg-preview.png" id="2_ef3v5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_grrij"]
+size = Vector2(338, 445)
+
+[node name="Portal" type="Area2D" unique_id=747170974]
+script = ExtResource("1_0r486")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1864882634]
+position = Vector2(-2, -22)
+shape = SubResource("RectangleShape2D_grrij")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1905286084]
+position = Vector2(2.9999962, -13)
+scale = Vector2(5.875, 4.93922)
+texture = ExtResource("2_ef3v5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
