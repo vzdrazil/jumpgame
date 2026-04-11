@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bh4lnwf7rluul" path="res://static_body_2d.tscn" id="8_rj586"]
 [ext_resource type="PackedScene" uid="uid://cs7hekgvmreeg" path="res://portal.tscn" id="11_hqns4"]
 [ext_resource type="PackedScene" uid="uid://c51yj65gyrcbw" path="res://pause_menu.tscn" id="11_x0ka3"]
+[ext_resource type="PackedScene" uid="uid://x16h5q4uq0cg" path="res://spikes_10.tscn" id="12_x0ka3"]
 
 [node name="Level" type="Node2D" unique_id=1267595479]
 script = ExtResource("1_0hol4")
@@ -226,5 +227,141 @@ offset_bottom = 174.0
 
 [node name="Portal" parent="." unique_id=747170974 instance=ExtResource("11_hqns4")]
 position = Vector2(8567, -58)
+
+[node name="OneByOne17" parent="." unique_id=825782687 instance=ExtResource("2_epypp")]
+position = Vector2(8665, 250)
+
+[node name="OneByOne21" parent="." unique_id=1321623565 instance=ExtResource("2_epypp")]
+position = Vector2(8847, -385)
+
+[node name="OneByOne22" parent="." unique_id=1931127172 instance=ExtResource("2_epypp")]
+position = Vector2(8989, -244)
+
+[node name="OneByOne23" parent="." unique_id=560333917 instance=ExtResource("2_epypp")]
+position = Vector2(9131, -103)
+
+[node name="OneByOne26" parent="." unique_id=1115062450 instance=ExtResource("2_epypp")]
+position = Vector2(8665, 390)
+
+[node name="OneByOne27" parent="." unique_id=484534772 instance=ExtResource("2_epypp")]
+position = Vector2(8665, 530)
+
+[node name="OneByOne28" parent="." unique_id=89639141 instance=ExtResource("2_epypp")]
+position = Vector2(8665, 670)
+
+[node name="bigOneByOne7" parent="." unique_id=590676297 instance=ExtResource("8_rj586")]
+position = Vector2(8733, 462)
+
+[node name="bigOneByOne8" parent="." unique_id=1647370409 instance=ExtResource("8_rj586")]
+position = Vector2(9629, 462)
+
+[node name="Spike20" parent="." unique_id=1006075089 instance=ExtResource("5_q6r6c")]
+position = Vector2(9312, 442)
+
+[node name="Spike21" parent="." unique_id=23411567 instance=ExtResource("5_q6r6c")]
+position = Vector2(9364, 442)
+
+[node name="Spike22" parent="." unique_id=1130104078 instance=ExtResource("5_q6r6c")]
+position = Vector2(9412, 442)
+
+[node name="Spike23" parent="." unique_id=128783383 instance=ExtResource("5_q6r6c")]
+position = Vector2(9085.001, -13.000015)
+rotation = -3.156052
+
+[node name="bigOneByOne9" parent="." unique_id=1328541632 instance=ExtResource("8_rj586")]
+position = Vector2(9201, -59)
+
+[node name="bigOneByOne10" parent="." unique_id=1156576691 instance=ExtResource("8_rj586")]
+position = Vector2(10097, -58)
+
+[node name="Spike24" parent="." unique_id=542506211 instance=ExtResource("5_q6r6c")]
+position = Vector2(9263, 442)
+
+[node name="Spike25" parent="." unique_id=259680596 instance=ExtResource("5_q6r6c")]
+position = Vector2(9134.001, -13)
+rotation = -3.0967176
+
+[node name="Spikes10" parent="." unique_id=285971817 instance=ExtResource("12_x0ka3")]
+position = Vector2(9663, 442)
+
+[node name="Spikes11" parent="." unique_id=547409940 instance=ExtResource("12_x0ka3")]
+position = Vector2(10171, 442)
+
+[node name="Spikes12" parent="." unique_id=1273618900 instance=ExtResource("12_x0ka3")]
+position = Vector2(8960, 443)
+
+[node name="Spikes13" parent="." unique_id=341653289 instance=ExtResource("12_x0ka3")]
+position = Vector2(9438, -14)
+rotation = -3.148028
+
+[node name="Spikes14" parent="." unique_id=1279868582 instance=ExtResource("12_x0ka3")]
+position = Vector2(9943, -13)
+rotation = -3.1375487
+
+[node name="Spikes15" parent="." unique_id=1492000210 instance=ExtResource("12_x0ka3")]
+position = Vector2(10450, -11)
+rotation = -3.1366467
+
+[node name="bigOneByOne11" parent="." unique_id=370589479 instance=ExtResource("8_rj586")]
+position = Vector2(10995, -55)
+
+[node name="bigOneByOne12" parent="." unique_id=1729815640 instance=ExtResource("8_rj586")]
+position = Vector2(10526, 462)
+
+[node name="bigOneByOne13" parent="." unique_id=684099002 instance=ExtResource("8_rj586")]
+position = Vector2(11423, 462)
+
+[node name="bigOneByOne14" parent="." unique_id=848724164 instance=ExtResource("8_rj586")]
+position = Vector2(11892, -55)
+
+[node name="Spikes16" parent="." unique_id=1335852889 instance=ExtResource("12_x0ka3")]
+position = Vector2(10679, 442)
+
+[node name="OneByOne29" parent="." unique_id=2063692057 instance=ExtResource("2_epypp")]
+position = Vector2(11032, 390)
+
+[node name="OneByOne32" parent="." unique_id=1890569975 instance=ExtResource("2_epypp")]
+position = Vector2(11169, 391)
+
+[node name="Spike26" parent="." unique_id=226662535 instance=ExtResource("5_q6r6c")]
+position = Vector2(10984, 301)
+
+[node name="Spike27" parent="." unique_id=822501087 instance=ExtResource("5_q6r6c")]
+position = Vector2(11034, 301)
+
+[node name="Spike28" parent="." unique_id=2042917936 instance=ExtResource("5_q6r6c")]
+position = Vector2(11080, 301)
+
+[node name="Spike29" parent="." unique_id=57149674 instance=ExtResource("5_q6r6c")]
+position = Vector2(11130, 302)
+
+[node name="Spike30" parent="." unique_id=1738153627 instance=ExtResource("5_q6r6c")]
+position = Vector2(11174, 301)
+
+[node name="Spike31" parent="." unique_id=1341211466 instance=ExtResource("5_q6r6c")]
+position = Vector2(11215, 302)
+
+[node name="Spikes17" parent="." unique_id=1355593969 instance=ExtResource("12_x0ka3")]
+position = Vector2(10958.001, -10)
+rotation = -3.129501
+
+[node name="Spikes18" parent="." unique_id=807268514 instance=ExtResource("12_x0ka3")]
+position = Vector2(11462, -7)
+rotation = 3.1536918
+
+[node name="OneByOne33" parent="." unique_id=1795876546 instance=ExtResource("2_epypp")]
+position = Vector2(11759, 45)
+
+[node name="OneByOne34" parent="." unique_id=1963010148 instance=ExtResource("2_epypp")]
+position = Vector2(11759, 186)
+
+[node name="Spike32" parent="." unique_id=757630257 instance=ExtResource("5_q6r6c")]
+position = Vector2(11263, 442)
+
+[node name="Spike33" parent="." unique_id=2072655336 instance=ExtResource("5_q6r6c")]
+position = Vector2(11312, 442)
+
+[node name="Spike34" parent="." unique_id=1285841477 instance=ExtResource("5_q6r6c")]
+position = Vector2(11363, 442)
 
 [connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]
