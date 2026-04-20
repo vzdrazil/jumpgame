@@ -11,6 +11,8 @@ const GRAVITY = 2900.0
 const ROTATION_SPEED = 5.10
 
 @onready var sprite = $Sprite2D
+@onready var cube_collision = $CollisionShape2D
+@onready var ship_collision = $CollisionShape2D_ship
 var is_ship = false
 
 func _physics_process(delta: float) -> void:
@@ -29,10 +31,16 @@ func enter_ship_mode():
 	sprite.rotation = 0
 	sprite.texture = load(\"res://ship.png\")
 
+	cube_collision.set_deferred(\"disabled\", true)
+	ship_collision.set_deferred(\"disabled\", false)
+
 func exit_ship_mode():
 	is_ship = false
 	velocity = Vector2.ZERO
 	sprite.rotation = 0
+
+	cube_collision.set_deferred(\"disabled\", false)
+	ship_collision.set_deferred(\"disabled\", true)
 func handle_cube(delta):
 
 	velocity.x = SPEED
@@ -80,6 +88,9 @@ func handle_ship(delta):
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
 size = Vector2(118, 113)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
+size = Vector2(80, 33)
+
 [node name="Player" type="CharacterBody2D" unique_id=1337890187]
 script = SubResource("GDScript_onrkg")
 
@@ -93,3 +104,7 @@ position = Vector2(0, -2.5)
 shape = SubResource("RectangleShape2D_i3pqv")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=708559715]
+
+[node name="CollisionShape2D_ship" type="CollisionShape2D" parent="." unique_id=1553582148]
+position = Vector2(-2, 11)
+shape = SubResource("RectangleShape2D_4flbx")

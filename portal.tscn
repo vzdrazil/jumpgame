@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://c4yeis8whdc24" path="res://ShipPortal-removebg-preview.png" id="2_ef3v5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_grrij"]
-size = Vector2(338, 445)
+size = Vector2(306, 445)
 
 [node name="Portal" type="Area2D" unique_id=747170974]
 script = ExtResource("1_0r486")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1864882634]
-position = Vector2(-2, -22)
+position = Vector2(14, -22)
 shape = SubResource("RectangleShape2D_grrij")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1905286084]

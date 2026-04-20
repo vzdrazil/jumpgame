@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cbmokfqo23ifj"]
+
+[ext_resource type="Script" uid="uid://b7a2ojrp26202" path="res://spikebigger.gd" id="1_qmfgk"]
+[ext_resource type="Texture2D" uid="uid://cojo80o2wstc0" path="res://spikes-11550721030sp47x0fyra-removebg-preview.png" id="2_pb8sb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ae7k3"]
+size = Vector2(44.75, 89.5)
+
+[node name="SPIKEBIGGER" type="Area2D" unique_id=1931262757]
+script = ExtResource("1_qmfgk")
+
+[node name="Spikes11550721030Sp47x0FyraRemovebgPreview" type="Sprite2D" parent="." unique_id=1379297513]
+position = Vector2(0.9999924, 0)
+scale = Vector2(0.31781375, 0.29356432)
+texture = ExtResource("2_pb8sb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1798029794]
+position = Vector2(-3, 22)
+shape = SubResource("RectangleShape2D_ae7k3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
