@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://db5bl6bxr0u18"]
+
+[ext_resource type="Texture2D" uid="uid://bgrr1n7p7mn34" path="res://portalwave-removebg-preview.png" id="1_n6wmj"]
+
+[sub_resource type="GDScript" id="GDScript_aki4q"]
+script/source = "extends Area2D
+
+
+func _on_body_entered(body):
+	if body.name == \"Player\":
+		body.enter_wave_mode()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ybo10"]
+size = Vector2(139, 272)
+
+[node name="PortalWave" type="Area2D" unique_id=1080398911]
+script = SubResource("GDScript_aki4q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1886341072]
+position = Vector2(2.5, -1)
+shape = SubResource("RectangleShape2D_ybo10")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1743157377]
+texture = ExtResource("1_n6wmj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

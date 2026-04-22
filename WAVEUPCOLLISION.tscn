@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cd7lsamls5y3f"]
+
+[ext_resource type="Texture2D" uid="uid://uougt12yqobg" path="res://V752_00.jpg" id="1_ai4rb"]
+
+[sub_resource type="GDScript" id="GDScript_ai4rb"]
+script/source = "extends Area2D
+
+
+func _on_body_entered(body):
+	var things = get_overlapping_bodies()
+	for t in things:
+		if t.has_method(\"Explode\"):
+			t.Explode()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a752h"]
+size = Vector2(1516.1265, 88.8512)
+
+[node name="Area2D" type="Area2D" unique_id=80547996]
+script = SubResource("GDScript_ai4rb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1767778742]
+position = Vector2(-1.4758453, 2.4202042)
+rotation = 2.3613775
+shape = SubResource("RectangleShape2D_a752h")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1104384587]
+
+[node name="V75200" type="Sprite2D" parent="." unique_id=29793221]
+position = Vector2(-3.0479584, 3.0029144)
+rotation = -0.77795196
+scale = Vector2(0.78863305, 0.08981481)
+texture = ExtResource("1_ai4rb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

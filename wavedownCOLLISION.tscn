@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c6757hou7xo4y"]
+
+[ext_resource type="Texture2D" uid="uid://uougt12yqobg" path="res://V752_00.jpg" id="1_la2t1"]
+
+[sub_resource type="GDScript" id="GDScript_la2t1"]
+script/source = "extends Area2D
+
+
+func _on_body_entered(body):
+	var things = get_overlapping_bodies()
+	for t in things:
+		if t.has_method(\"Explode\"):
+			t.Explode()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a0u25"]
+size = Vector2(1063.4591, 74.840225)
+
+[node name="wavedown" type="Area2D" unique_id=1205852554]
+script = SubResource("GDScript_la2t1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1116494540]
+position = Vector2(-2.4524536, 5.4660187)
+rotation = 0.7861898
+shape = SubResource("RectangleShape2D_a0u25")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1613169130]
+position = Vector2(-3.1755066, 4.820038)
+rotation = 0.78582454
+scale = Vector2(0.5549324, 0.07129629)
+texture = ExtResource("1_la2t1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

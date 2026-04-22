@@ -13,17 +13,57 @@ const ROTATION_SPEED = 5.10
 @onready var sprite = $Sprite2D
 @onready var cube_collision = $CollisionShape2D
 @onready var ship_collision = $CollisionShape2D_ship
+@onready var wave_collision = $CollisionShape2D_wave
+@onready var trail = $Line2D
+@onready var camera = get_parent().get_node(\"Camera2D\")
+@onready var ghost_scene = preload(\"res://ghost.tscn\")
+var ghost_timer := 0.0
 var is_ship = false
+var is_wave = false
+# 👇 TADY
+
 
 func _physics_process(delta: float) -> void:
-	if is_ship:
+	if is_wave:
+		handle_wave(delta)
+		
+
+		ghost_timer += delta
+
+		if ghost_timer > 0.000000000000000002: # rychlost trailu
+			spawn_ghost()
+			ghost_timer = 0.0
+	elif is_ship:
 		handle_ship(delta)
+		# když nejsi wave → trail zmizí
+		
 	else:
 		handle_cube(delta)
+		# když nejsi wave → trail zmizí
+		
 
+
+	
 func Explode():
 	set_physics_process(false)
 	visible = false
+	
+func enter_wave_mode():
+	is_wave = true
+	is_ship = false
+
+	velocity = Vector2.ZERO
+	sprite.rotation = 0
+	sprite.texture = load(\"res://wave.png\") # dej si vlastní wave sprite
+
+	cube_collision.set_deferred(\"disabled\", true)
+	ship_collision.set_deferred(\"disabled\", true)
+	wave_collision.set_deferred(\"disabled\", false)
+	camera.zoom = Vector2(0.6, 0.6)  # 👈 víc prostoru
+func exit_wave_mode():
+	is_wave = false
+
+	camera.zoom = Vector2(1, 1)
 
 func enter_ship_mode():
 	is_ship = true
@@ -33,6 +73,7 @@ func enter_ship_mode():
 
 	cube_collision.set_deferred(\"disabled\", true)
 	ship_collision.set_deferred(\"disabled\", false)
+	wave_collision.set_deferred(\"disabled\", true)
 
 func exit_ship_mode():
 	is_ship = false
@@ -41,6 +82,22 @@ func exit_ship_mode():
 
 	cube_collision.set_deferred(\"disabled\", false)
 	ship_collision.set_deferred(\"disabled\", true)
+	wave_collision.set_deferred(\"disabled\", true)
+func handle_wave(delta):
+	
+	var wave_speed = 800
+
+	velocity.x = wave_speed
+
+	if Input.is_action_pressed(\"jump\"):
+		velocity.y = -wave_speed
+		sprite.rotation = PI / 4  # nahoru (−45°)
+	else:
+		velocity.y = wave_speed
+		sprite.rotation = 3*PI / 4    # dolů (+45°)
+
+	move_and_slide()
+	
 func handle_cube(delta):
 
 	velocity.x = SPEED
@@ -83,6 +140,16 @@ func handle_ship(delta):
 	sprite.rotation = lerp(sprite.rotation, target_rot, 8 * delta)
 
 	move_and_slide()
+func spawn_ghost():
+	var ghost = ghost_scene.instantiate()
+
+	get_parent().add_child(ghost)
+
+	ghost.setup(
+		sprite.texture,
+		global_position,
+		sprite.rotation
+	)
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
@@ -90,6 +157,9 @@ size = Vector2(118, 113)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
 size = Vector2(80, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(52, 20)
 
 [node name="Player" type="CharacterBody2D" unique_id=1337890187]
 script = SubResource("GDScript_onrkg")
@@ -108,3 +178,6 @@ shape = SubResource("RectangleShape2D_i3pqv")
 [node name="CollisionShape2D_ship" type="CollisionShape2D" parent="." unique_id=1553582148]
 position = Vector2(-2, 11)
 shape = SubResource("RectangleShape2D_4flbx")
+
+[node name="CollisionShape2D_wave" type="CollisionShape2D" parent="." unique_id=581329797]
+shape = SubResource("RectangleShape2D_onrkg")

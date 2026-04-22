@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://du7hcjbcqd6gp"]
+
+[sub_resource type="GDScript" id="GDScript_0tr3y"]
+script/source = "extends Node2D
+
+@onready var sprite = $Sprite2D
+
+var fade_speed = 0.5
+
+func setup(texture, pos, rot):
+	sprite.texture = texture
+	global_position = pos
+	global_rotation = rot
+	scale = Vector2(0.3, 0.3)
+	modulate = Color(1, 1, 1, 0.6)
+
+func _process(delta):
+	modulate.a -= fade_speed * delta
+
+	if modulate.a <= 0:
+		queue_free()
+"
+
+[node name="Node2D" type="Node2D" unique_id=1119413438]
+script = SubResource("GDScript_0tr3y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=424876521]
+
+[node name="Timer" type="Timer" parent="." unique_id=1896206945]

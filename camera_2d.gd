@@ -4,7 +4,8 @@ extends Camera2D
 @export var x_offset := -180  # 👈 hráč bude víc vlevo
 @export var y_offset := 100   # jak daleko může hráč vyskočit bez pohybu kamery
 @export var follow_speed := 5 # jak rychle kamera dojede
-
+func _ready():
+	zoom = Vector2(0.9, 0.9)  # 👈 ZVĚTŠENÍ VIEW
 func _process(delta):
 	if not player:
 		return
