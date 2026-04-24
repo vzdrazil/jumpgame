@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://hxxh58ac6exd"]
+
+[ext_resource type="Texture2D" uid="uid://bybauqs5enn7p" path="res://images1-removebg-preview.png" id="1_3n1ru"]
+
+[sub_resource type="GDScript" id="GDScript_w0xlg"]
+script/source = "extends Area2D
+func _on_body_entered(body):
+	if body.name == \"Player\":
+		body.enter_cube_mode()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ad2q"]
+size = Vector2(97, 172)
+
+[node name="Area2D" type="Area2D" unique_id=2061123387]
+script = SubResource("GDScript_w0xlg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1336353258]
+position = Vector2(2, -4)
+scale = Vector2(0.6333333, 0.67704916)
+texture = ExtResource("1_3n1ru")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=550370153]
+position = Vector2(5.5, -6)
+shape = SubResource("RectangleShape2D_2ad2q")

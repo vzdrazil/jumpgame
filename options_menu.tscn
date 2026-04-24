@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cw1lhehlp1b3i"]
+
+[ext_resource type="Script" uid="uid://cn77dvyngs61u" path="res://options_menu.gd" id="1_lbr8e"]
+
+[node name="OptionsMenu" type="Control" unique_id=748857249]
+layout_mode = 3
+anchor_top = 0.016
+anchor_bottom = 0.016
+offset_left = 36.0
+offset_top = 29.632
+offset_right = 992.0
+offset_bottom = 294.632
+script = ExtResource("1_lbr8e")
+
+[node name="Panel" type="Panel" parent="." unique_id=1789427339]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 6.0
+offset_right = 691.0
+offset_bottom = 215.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=1198758853]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 21.0
+offset_right = 319.0
+offset_bottom = 44.0
+text = "OPTIONS"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1209249005]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 83.0
+offset_right = 600.0
+offset_bottom = 268.0
+
+[node name="MusicToggle" type="CheckBox" parent="VBoxContainer" unique_id=1283418626]
+layout_mode = 2
+text = "MUSIC ON"
+
+[node name="FullScreenToggle" type="CheckBox" parent="VBoxContainer" unique_id=358360708]
+layout_mode = 2
+text = "FULLSCREEN"
+
+[node name="BackButton" type="Button" parent="VBoxContainer" unique_id=607656023]
+layout_mode = 2
+text = "MENU"
+
+[connection signal="pressed" from="VBoxContainer/MusicToggle" to="." method="_on_music_toggle_pressed"]
+[connection signal="pressed" from="VBoxContainer/FullScreenToggle" to="." method="_on_full_screen_toggle_pressed"]
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
