@@ -155,7 +155,7 @@ position = Vector2(-2548, 1)
 position = Vector2(3178, 534)
 
 [node name="OneByOne2" parent="OneByOne19" unique_id=1964752493 instance=ExtResource("2_epypp")]
-position = Vector2(1247, -1)
+position = Vector2(1385, 3)
 
 [node name="OneByOne24" parent="." unique_id=1269699837 instance=ExtResource("2_epypp")]
 position = Vector2(3505, 407)
@@ -188,7 +188,7 @@ position = Vector2(1900, 324)
 position = Vector2(3784, 407)
 
 [node name="OneByOne2" parent="." unique_id=153773388 instance=ExtResource("2_epypp")]
-position = Vector2(4425, 672)
+position = Vector2(4563, 674)
 
 [node name="OneByOne3" parent="." unique_id=1865939873 instance=ExtResource("2_epypp")]
 position = Vector2(3926, 407)
@@ -215,25 +215,25 @@ position = Vector2(4986, 442)
 position = Vector2(5056, 442)
 
 [node name="Spike11" parent="." unique_id=2013910277 instance=ExtResource("5_q6r6c")]
-position = Vector2(4973, 107.000015)
+position = Vector2(4973, 103)
 rotation = 3.1728044
 
 [node name="OneByOne11" parent="Spike11" unique_id=1447826655 instance=ExtResource("2_epypp")]
-position = Vector2(-2041.4023, -269.4259)
+position = Vector2(-2041.7769, -281.4201)
 rotation = 3.110381
 
 [node name="Spike11" parent="Spike11" unique_id=1284724160 instance=ExtResource("5_q6r6c")]
 position = Vector2(4808, 204)
 
 [node name="Spike12" parent="." unique_id=1104489497 instance=ExtResource("5_q6r6c")]
-position = Vector2(5066.0005, 108)
+position = Vector2(5066, 105.000015)
 rotation = -3.1535854
 
 [node name="OneByOne5" parent="." unique_id=1998332415 instance=ExtResource("2_epypp")]
 position = Vector2(5019, 16)
 
 [node name="Spike13" parent="." unique_id=38738904 instance=ExtResource("5_q6r6c")]
-position = Vector2(5021.0005, 108)
+position = Vector2(5021.0005, 105)
 rotation = -3.0974216
 
 [node name="Spike14" parent="." unique_id=1628316267 instance=ExtResource("5_q6r6c")]
@@ -279,13 +279,13 @@ position = Vector2(7005, 579)
 position = Vector2(3926, 544)
 
 [node name="OneByOne13" parent="." unique_id=1691618063 instance=ExtResource("2_epypp")]
-position = Vector2(3926, 685)
+position = Vector2(3926, 678)
 
 [node name="OneByOne14" parent="." unique_id=940299953 instance=ExtResource("2_epypp")]
-position = Vector2(3505, 681)
+position = Vector2(3505, 679)
 
 [node name="OneByOne16" parent="." unique_id=1176835200 instance=ExtResource("2_epypp")]
-position = Vector2(2726, 537)
+position = Vector2(2726, 535)
 
 [node name="OneByOne18" parent="." unique_id=1114579077 instance=ExtResource("2_epypp")]
 position = Vector2(178, 537)
@@ -501,7 +501,7 @@ rotation = -3.1341522
 position = Vector2(13173, 305)
 
 [node name="Spike43" parent="." unique_id=2079682730 instance=ExtResource("5_q6r6c")]
-position = Vector2(13170.002, 136.00002)
+position = Vector2(13170.001, 133.00002)
 rotation = 3.136778
 
 [node name="bigOneByOne18" parent="." unique_id=1339337170 instance=ExtResource("8_rj586")]
@@ -590,7 +590,7 @@ scale = Vector2(0.1255066, 0.13366337)
 texture = ExtResource("14_d2bti")
 
 [node name="Spikes11550721030Sp47x0FyraRemovebgPreview2" type="Sprite2D" parent="." unique_id=1623016862]
-position = Vector2(16823, 709.37506)
+position = Vector2(16820, 712.00006)
 scale = Vector2(0.17813337, 0.21930702)
 texture = ExtResource("14_d2bti")
 
@@ -793,7 +793,7 @@ position = Vector2(35038, 1081)
 position = Vector2(33292, 1086)
 
 [node name="Spike52" parent="." unique_id=213651022 instance=ExtResource("5_q6r6c")]
-position = Vector2(33341, 1086)
+position = Vector2(33242, 1086)
 
 [node name="bigOneByOne37" parent="." unique_id=2050946284 instance=ExtResource("8_rj586")]
 position = Vector2(33526, 1105)
@@ -832,7 +832,7 @@ position = Vector2(33761, 1066)
 position = Vector2(33758, 694)
 
 [node name="Spike53" parent="." unique_id=1053260498 instance=ExtResource("5_q6r6c")]
-position = Vector2(33758.004, 784)
+position = Vector2(33757, 782.00006)
 rotation = -3.1201766
 
 [node name="OneByOne51" parent="." unique_id=980171506 instance=ExtResource("2_epypp")]
@@ -928,5 +928,29 @@ position = Vector2(38879, 1081)
 
 [node name="EndPortal" parent="." unique_id=869038498 instance=ExtResource("3_e8dv2")]
 position = Vector2(39114, 975)
+
+[node name="bigOneByOne43" parent="." unique_id=1839308371 instance=ExtResource("8_rj586")]
+position = Vector2(3738, 744)
+
+[node name="bigOneByOne44" parent="." unique_id=1326970855 instance=ExtResource("8_rj586")]
+position = Vector2(2823, 743)
+
+[node name="OneByOne60" parent="." unique_id=506522587 instance=ExtResource("2_epypp")]
+position = Vector2(2727, 671)
+
+[node name="OneByOne61" parent="." unique_id=1956392217 instance=ExtResource("2_epypp")]
+position = Vector2(2761, 811)
+
+[node name="OneByOne62" parent="." unique_id=354628849 instance=ExtResource("2_epypp")]
+position = Vector2(2622, 810)
+
+[node name="Spikes27" parent="." unique_id=1310143449 instance=ExtResource("12_x0ka3")]
+position = Vector2(3084, 725)
+
+[node name="Spikes28" parent="." unique_id=1456813982 instance=ExtResource("12_x0ka3")]
+position = Vector2(4218, 725)
+
+[node name="OneByOne63" parent="." unique_id=195695199 instance=ExtResource("2_epypp")]
+position = Vector2(178, 673)
 
 [connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]

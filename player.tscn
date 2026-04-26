@@ -58,9 +58,9 @@ func enter_cube_mode():
 	sprite.rotation = 0
 	sprite.texture = load(\"res://608-6084351_geometry-dash-icons-transparent-hd-png-download-removebg-preview.png\") # uprav si cestu pokud máš jiný sprite
 
-	cube_collision.disabled = false
-	ship_collision.disabled = true
-	wave_collision.disabled = true
+	cube_collision.set_deferred(\"disabled\", false)
+	ship_collision.set_deferred(\"disabled\", true)
+	wave_collision.set_deferred(\"disabled\", true)
 
 	camera.zoom = Vector2(1, 1)
 		
@@ -72,9 +72,9 @@ func enter_wave_mode():
 	sprite.rotation = 0
 	sprite.texture = load(\"res://wave.png\") # dej si vlastní wave sprite
 
-	wave_collision.disabled = false
-	cube_collision.disabled = true
-	ship_collision.disabled = true
+	cube_collision.set_deferred(\"disabled\", true)
+	ship_collision.set_deferred(\"disabled\", true)
+	wave_collision.set_deferred(\"disabled\", false)
 	camera.zoom = Vector2(0.6, 0.6)  # 👈 víc prostoru
 func exit_wave_mode():
 	is_wave = false
