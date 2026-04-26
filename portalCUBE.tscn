@@ -10,16 +10,18 @@ func _on_body_entered(body):
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ad2q"]
-size = Vector2(97, 172)
+size = Vector2(235, 351)
 
 [node name="Area2D" type="Area2D" unique_id=2061123387]
 script = SubResource("GDScript_w0xlg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1336353258]
-position = Vector2(2, -4)
-scale = Vector2(0.6333333, 0.67704916)
+position = Vector2(70.375, 43.000008)
+scale = Vector2(1.4621211, 1.337705)
 texture = ExtResource("1_3n1ru")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=550370153]
-position = Vector2(5.5, -6)
+position = Vector2(74.5, 32.5)
 shape = SubResource("RectangleShape2D_2ad2q")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

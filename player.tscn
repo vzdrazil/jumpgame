@@ -47,7 +47,23 @@ func _physics_process(delta: float) -> void:
 func Explode():
 	set_physics_process(false)
 	visible = false
-	
+
+
+
+func enter_cube_mode():
+	is_ship = false
+	is_wave = false
+
+	velocity = Vector2.ZERO
+	sprite.rotation = 0
+	sprite.texture = load(\"res://608-6084351_geometry-dash-icons-transparent-hd-png-download-removebg-preview.png\") # uprav si cestu pokud máš jiný sprite
+
+	cube_collision.disabled = false
+	ship_collision.disabled = true
+	wave_collision.disabled = true
+
+	camera.zoom = Vector2(1, 1)
+		
 func enter_wave_mode():
 	is_wave = true
 	is_ship = false
@@ -56,9 +72,9 @@ func enter_wave_mode():
 	sprite.rotation = 0
 	sprite.texture = load(\"res://wave.png\") # dej si vlastní wave sprite
 
-	cube_collision.set_deferred(\"disabled\", true)
-	ship_collision.set_deferred(\"disabled\", true)
-	wave_collision.set_deferred(\"disabled\", false)
+	wave_collision.disabled = false
+	cube_collision.disabled = true
+	ship_collision.disabled = true
 	camera.zoom = Vector2(0.6, 0.6)  # 👈 víc prostoru
 func exit_wave_mode():
 	is_wave = false
@@ -95,7 +111,6 @@ func handle_wave(delta):
 	else:
 		velocity.y = wave_speed
 		sprite.rotation = 3*PI / 4    # dolů (+45°)
-
 	move_and_slide()
 	
 func handle_cube(delta):

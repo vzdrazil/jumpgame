@@ -3,7 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://dnwdwa7a4altr" path="res://player.tscn" id="1_0e48y"]
 [ext_resource type="Script" uid="uid://b7ghv0brce2de" path="res://node_2d.gd" id="1_0hol4"]
 [ext_resource type="Texture2D" uid="uid://b36rqk06eajpe" path="res://86yagye25g841.webp" id="2_4d7sh"]
+[ext_resource type="PackedScene" uid="uid://d0t4iouyo7m3e" path="res://win_panel.tscn" id="2_ei405"]
 [ext_resource type="PackedScene" uid="uid://dfrv8o1blwore" path="res://one_by_one.tscn" id="2_epypp"]
+[ext_resource type="PackedScene" uid="uid://boqc13noxeyuc" path="res://end_portal.tscn" id="3_e8dv2"]
 [ext_resource type="Texture2D" uid="uid://du40lm4s28j8s" path="res://otaznik-removebg-preview.png" id="3_nr8wp"]
 [ext_resource type="PackedScene" uid="uid://dairla2nn32k6" path="res://kill_zone.tscn" id="4_q6r6c"]
 [ext_resource type="PackedScene" uid="uid://b65gfolbolw4q" path="res://spike.tscn" id="5_q6r6c"]
@@ -23,6 +25,8 @@
 
 [node name="Level" type="Node2D" unique_id=1267595479]
 script = ExtResource("1_0hol4")
+
+[node name="WinPanel" parent="." unique_id=2128381283 instance=ExtResource("2_ei405")]
 
 [node name="86Yagye25g853" type="Sprite2D" parent="." unique_id=1609646940]
 position = Vector2(39078, 556)
@@ -114,7 +118,7 @@ position = Vector2(7096, -297)
 position = Vector2(7261, 663)
 
 [node name="Player" parent="." unique_id=1337890187 instance=ExtResource("1_0e48y")]
-position = Vector2(35181, 1034)
+position = Vector2(210, 263)
 
 [node name="KillZone" parent="." unique_id=1944996740 instance=ExtResource("4_q6r6c")]
 position = Vector2(118, 265)
@@ -292,10 +296,10 @@ position = Vector2(8210, 73)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=109280880]
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=1379368621 instance=ExtResource("11_x0ka3")]
-offset_left = 144.0
-offset_top = -57.0
-offset_right = 144.0
-offset_bottom = -57.0
+offset_left = 49.0
+offset_top = 14.0
+offset_right = 49.0
+offset_bottom = 14.0
 
 [node name="Portal" parent="." unique_id=747170974 instance=ExtResource("11_hqns4")]
 position = Vector2(8567, -58)
@@ -662,7 +666,7 @@ position = Vector2(18455, 487)
 position = Vector2(18455, 550)
 
 [node name="PortalWave" parent="." unique_id=1080398911 instance=ExtResource("17_flf07")]
-position = Vector2(18854, 711)
+position = Vector2(18855, 738)
 
 [node name="wavedown" parent="." unique_id=829199780 instance=ExtResource("18_rjqkl")]
 position = Vector2(18968.002, 665.00006)
@@ -763,7 +767,7 @@ position = Vector2(30173, 1140)
 position = Vector2(30837, 124)
 
 [node name="wavedown14" parent="." unique_id=676148823 instance=ExtResource("18_rjqkl")]
-position = Vector2(30821, 415)
+position = Vector2(30733, 340)
 
 [node name="wavedown15" parent="." unique_id=1746385249 instance=ExtResource("18_rjqkl")]
 position = Vector2(31032, 972)
@@ -773,11 +777,11 @@ position = Vector2(31880.004, 1076.999)
 rotation = 0.78952146
 
 [node name="Area2D20" parent="." unique_id=1554830138 instance=ExtResource("19_fs4d3")]
-position = Vector2(31929, 783.999)
+position = Vector2(31839, 709)
 rotation = 0.78891397
 
 [node name="Area2D21" parent="." unique_id=2061123387 instance=ExtResource("20_fs4d3")]
-position = Vector2(32698, 947)
+position = Vector2(32691, 835)
 
 [node name="bigOneByOne36" parent="." unique_id=2049506729 instance=ExtResource("8_rj586")]
 position = Vector2(32631, 1105)
@@ -921,5 +925,8 @@ position = Vector2(38830, 1082)
 
 [node name="Spike68" parent="." unique_id=392147636 instance=ExtResource("5_q6r6c")]
 position = Vector2(38879, 1081)
+
+[node name="EndPortal" parent="." unique_id=869038498 instance=ExtResource("3_e8dv2")]
+position = Vector2(39114, 975)
 
 [connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]

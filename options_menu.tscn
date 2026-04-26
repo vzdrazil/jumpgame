@@ -40,7 +40,7 @@ text = "MUSIC ON"
 
 [node name="FullScreenToggle" type="CheckBox" parent="VBoxContainer" unique_id=358360708]
 layout_mode = 2
-text = "FULLSCREEN"
+text = "FULLSCREEN (Nedoporučuje se)"
 
 [node name="BackButton" type="Button" parent="VBoxContainer" unique_id=607656023]
 layout_mode = 2

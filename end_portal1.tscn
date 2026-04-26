@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bts7eibrcymvb"]
+
+[ext_resource type="PackedScene" uid="uid://boqc13noxeyuc" path="res://end_portal.tscn" id="1_mk4mv"]
+
+[node name="EndPortal" unique_id=869038498 instance=ExtResource("1_mk4mv")]

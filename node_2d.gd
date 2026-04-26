@@ -4,9 +4,19 @@ extends Node2D
 var music
 var panel
 
+@onready var portal = $EndPortal
+@onready var win_panel = $WinPanel
+
+
+
+func _on_player_won():
+	get_tree().paused = true
+	win_panel.visible = true
+
 
 func _ready():
-
+	portal.player_won.connect(_on_player_won)
+	win_panel.visible = false
 	#PauseMenu:
 	
 	add_child(pause_menu)
@@ -36,6 +46,7 @@ func _process(delta):
 	
 func _on_kill_zone_body_entered(body):
 	if body.name == "Player":
+		print("COLLISION:", body)
 		body.set_physics_process(false)
 		call_deferred("restart_scene")
 
